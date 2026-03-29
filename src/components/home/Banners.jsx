@@ -5,7 +5,7 @@ const Marquee = MarqueeModule.default;
 
 const Banners = () => {
   return (
-    <Marquee className="lg:mt-20 mt-12">
+    <Marquee className="lg:mt-20 mt-8">
       {[1, 2, 3, 4, 5, 6, 7].map((item) => (
         <img src={banner} alt="banner" className="mx-2 rounded-lg" key={item} />
       ))}

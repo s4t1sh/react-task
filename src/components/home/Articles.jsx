@@ -3,7 +3,7 @@ import headaway from "../../assets/home/headaway.png";
 
 const ArticleCard = ({ badge, badgeColor, title, desc, time }) => {
   return (
-    <div className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col items-end text-right border border-gray-50">
+    <div className="bg-white rounded-3xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col items-end text-right border border-gray-50 md:min-w-0 md:flex-1 shrink-0 w-[300px]">
       <img src={headaway} alt={title} className="w-full h-56 object-cover" />
       <div className="p-8 flex flex-col gap-4">
         <div className="flex items-center justify-between w-full dir-rtl">
@@ -52,15 +52,15 @@ const Articles = () => {
 
   return (
     <section
-      className="max-w-7xl mx-auto py-24 px-10 text-center flex flex-col gap-12"
+      className="max-w-7xl mx-auto lg:py-24 py-4 lg:px-10 text-center flex flex-col gap-12"
       dir="rtl"
     >
-      <h2 className="text-4xl font-bold">
+      <h2 className="lg:text-4xl text-2xl font-bold px-4">
         <span>קצת תוכן </span>
         <GradientText text="שבטוח יעניין אתכם" />
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="flex w-full overflow-x-scroll no-scrollbar lg:gap-8 gap-4">
         {articles.map((article, idx) => (
           <ArticleCard key={idx} {...article} />
         ))}

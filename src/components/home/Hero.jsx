@@ -4,12 +4,12 @@ import GradientText from "../../universal/GradientText";
 
 export default function Hero() {
   return (
-    <section className="pb-6 text-center grid grid-cols-2 gap-8">
+    <section className="pb-6 text-center grid grid-cols-1 lg:grid-cols-2 gap-8">
       <article>
         <img src={illustration} alt="hero" className="lg:w-3xl" />
       </article>
       <article className="md:text-right flex flex-col gap-6 items-end items-center justify-center">
-        <button className="bg-[#F9F0F8] text-primary px-6 py-3 text-sm rounded-xl cursor-pointer flex gap-4 items-center justify-end w-fit">
+        <button className="hidden bg-[#F9F0F8] text-primary px-6 py-3 text-sm rounded-xl cursor-pointer lg:flex gap-4 items-center justify-end w-fit">
           פלטפורמת AI לתהליכים בירוקרטיים
         </button>
         <h1 className="text-4xl md:text-6xl leading-tight">

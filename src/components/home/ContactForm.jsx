@@ -2,8 +2,8 @@ import bgRings from "../../assets/home/form-circles.png";
 
 const ContactForm = () => {
   return (
-    <section className="max-w-7xl mx-auto py-16 px-10" dir="rtl">
-      <div className="relative bg-[#FBFCFF] rounded-[60px] p-16 flex flex-col items-center text-center overflow-hidden">
+    <section className="max-w-7xl mx-auto lg:py-16 py-4 lg:px-10 px-4" dir="rtl">
+      <div className="relative bg-[#FBFCFF] rounded-[60px] lg:p-16 p-4 flex flex-col items-center text-center overflow-hidden">
         {/* Decorative Background Rings */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-[60px] -translate-x-1/2  left-1/2">
           <img src={bgRings} alt="rings" />
@@ -14,15 +14,15 @@ const ContactForm = () => {
         </div>
 
         <div className="relative z-10 flex flex-col gap-8 max-w-4xl">
-          <h2 className="text-4xl font-bold text-[#0F172A] leading-tight">
+          <h2 className="lg:text-4xl text-2xl font-bold text-[#0F172A] lg:leading-tight leading-relaxed">
             נשמח לדבר אתכם, השאירו פרטים ונחזור אליכם בהקדם.
           </h2>
-          <p className="text-gray-500 font-medium text-lg lg:px-20 leading-relaxed">
+          <p className="text-gray-500 font-medium lg:text-lg text-sm lg:px-20 leading-relaxed">
             אנחנו מייצרים עבורכם את כל הטפסים בעזרת מערכת חכמה וחדשנית וחוסכים
             לכם את כל הכאב ראש והבירוקרטיה
           </p>
 
-          <form className="flex flex-col md:flex-row gap-4 mt-8 w-full items-center justify-center">
+          <form className="flex flex-col md:flex-row gap-4 lg:mt-8 w-full items-center justify-center">
             <input
               type="text"
               placeholder="שם"

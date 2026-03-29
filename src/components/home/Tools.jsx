@@ -6,7 +6,7 @@ const ToolCard = ({ title, tag, isTeaser, className, style }) => {
 
   return (
     <div
-      className={`absolute group transition-all duration-500 hover:scale-105 ${className} cursor-pointer`}
+      className={`relative lg:absolute group transition-all duration-500 hover:scale-105 ${className} cursor-pointer`}
       style={style}
     >
       {/* Shadow Wrapper - We can't clip the shadow, so we use a background div */}
@@ -17,7 +17,7 @@ const ToolCard = ({ title, tag, isTeaser, className, style }) => {
 
       {/* Clipped Content */}
       <div
-        className={`relative w-[320px] h-[360px] p-10 flex flex-col items-center justify-center text-center ${isTeaser ? "bg-white/40 backdrop-blur-md" : "bg-white"}`}
+        className={`relative lg:w-[280px] lg:h-[320px] lg:w-[320px] lg:h-[360px] p-4 lg:p-10 flex flex-col items-center justify-center text-center ${isTeaser ? "bg-white/40 backdrop-blur-md" : "bg-white"}`}
         style={{ clipPath: verticalHexagon }}
       >
         {isTeaser ? (
@@ -26,7 +26,7 @@ const ToolCard = ({ title, tag, isTeaser, className, style }) => {
           </p>
         ) : (
           <>
-            <div className="absolute top-12 bg-[#F9F0F8] text-[10px] px-3 py-1 rounded-full font-bold">
+            <div className="absolute top-0 lg:top-12 bg-[#F9F0F8] text-[10px] px-3 py-1 rounded-full font-bold">
               {tag}
             </div>
 
@@ -52,24 +52,22 @@ const ToolCard = ({ title, tag, isTeaser, className, style }) => {
 
 export default function Tools() {
   const tools = [
-    { title: "תהליך הגשת תביעה קטנה", tag: "חינם", top: "0%", right: "10%" },
+    { title: "תהליך הגשת תביעה קטנה", tag: "חינם", pos: "lg:top-0 lg:right-[10%]" },
     {
       title: "בדיקת החזר מחברת הביטוח ",
       tag: "חינם",
-      top: "15%",
-      right: "45%",
+      pos: "lg:top-[15%] lg:right-[45%]",
     },
-    { title: "הכנת מכתב לבנקים", tag: "חינם", top: "40%", right: "0%" },
+    { title: "הכנת מכתב לבנקים", tag: "חינם", pos: "lg:top-[40%] lg:right-0" },
     {
       title: "בדיקת החזר כסף לשכירים",
       tag: '50 ש"ח',
-      top: "55%",
-      right: "35%",
+      pos: "lg:top-[55%] lg:right-[35%]",
     },
   ];
 
   return (
-    <section className="relative py-16 bg-[#FBFCFE] overflow-hidden" dir="rtl">
+    <section className="relative py-8 lg:py-16 bg-[#FBFCFE] overflow-hidden" dir="rtl">
       {/* Background Decorative Rings */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1400px] h-[1400px] pointer-events-none">
         <div className="absolute inset-0 rounded-full border border-gray-100 opacity-50 scale-100"></div>
@@ -77,31 +75,31 @@ export default function Tools() {
         <div className="absolute inset-0 rounded-full border border-gray-100 opacity-30 scale-50"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
+      <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row lg:gap-20">
         {/* Right Header Section */}
-        <div className="w-full lg:w-1/3 flex flex-col gap-8 text-right z-20">
-          <h2 className="text-5xl lg:text-6xl font-bold tracking-tight">
+        <div className="w-full lg:w-1/3 flex flex-col gap-4 lg:gap-8 lg:text-right text-center z-20">
+          <h2 className="text-4xl lg:text-6xl font-bold tracking-tight">
             <GradientText text="הכלים שלנו" />
           </h2>
-          <p className="text-[#4A5568] text-xl leading-relaxed font-medium">
+          <p className="text-[#4A5568] text-lg lg:text-xl leading-relaxed font-medium">
             הכלים שלנו מייצרים עבורכם את כל מה שאתם צריכים בקלות ומהירות, כלים
             נוספים ייכנסו בהמשך
           </p>
         </div>
 
         {/* Left Staggered Cards Area */}
-        <div className="relative w-full lg:w-2/3 h-[900px] mt-20 lg:mt-0">
+        <div className="relative w-full lg:w-2/3 lg:h-[900px] mt-8 lg:mt-0 flex flex-col items-center gap-4 lg:gap-10 lg:block">
           {tools.map((tool, idx) => (
             <ToolCard
               key={idx}
               title={tool.title}
               tag={tool.tag}
-              style={{ top: tool.top, right: tool.right }}
+              className={tool.pos}
             />
           ))}
 
           {/* Teaser Card */}
-          <ToolCard isTeaser style={{ top: "35%", right: "75%" }} />
+          <ToolCard isTeaser className="lg:top-[35%] lg:right-[75%]" />
         </div>
       </div>
     </section>

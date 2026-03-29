@@ -36,8 +36,8 @@ const AccordionItem = ({ header, ...rest }) => (
   <Item
     {...rest}
     header={({ state: { isEnter } }) => (
-      <div className="flex w-full justify-between flex-row-reverse">
-        <p>{header}</p>
+      <div className="flex w-full justify-between flex-row-reverse gap-16">
+        <p className="text-right">{header}</p>
         <img
           className={`transition-transform duration-200 ease-out w-4 ${
             isEnter && "rotate-45"
@@ -60,7 +60,7 @@ const AccordionItem = ({ header, ...rest }) => (
 
 const FAQ = () => {
   return (
-    <div className="py-16 lg:mx-56 flex flex-col gap-4 text-center">
+    <div className="lg:py-16 py-10 lg:mx-56 flex flex-col gap-4 text-center">
       <p className="text-3xl">
         <GradientText text={"שאלות "} />
         <span>שאולי יש לכם</span>
