@@ -1,4 +1,6 @@
+import Articles from "../components/home/Articles";
 import Banners from "../components/home/Banners";
+import ContactForm from "../components/home/ContactForm";
 import Details from "../components/home/Details";
 import FAQ from "../components/home/FAQ";
 import Features from "../components/home/Features";
@@ -16,6 +18,8 @@ const Home = () => {
       <Tools />
       <Testimonials />
       <FAQ />
+      <Articles />
+      <ContactForm />
     </>
   );
 };

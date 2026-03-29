@@ -69,10 +69,7 @@ export default function Tools() {
   ];
 
   return (
-    <section
-      className="relative py-16 bg-[#FBFCFE] overflow-hidden"
-      dir="rtl"
-    >
+    <section className="relative py-16 bg-[#FBFCFE] overflow-hidden" dir="rtl">
       {/* Background Decorative Rings */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1400px] h-[1400px] pointer-events-none">
         <div className="absolute inset-0 rounded-full border border-gray-100 opacity-50 scale-100"></div>
@@ -83,7 +80,7 @@ export default function Tools() {
       <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
         {/* Right Header Section */}
         <div className="w-full lg:w-1/3 flex flex-col gap-8 text-right z-20">
-          <h2 className="text-5xl lg:text-6xl font-black tracking-tight">
+          <h2 className="text-5xl lg:text-6xl font-bold tracking-tight">
             <GradientText text="הכלים שלנו" />
           </h2>
           <p className="text-[#4A5568] text-xl leading-relaxed font-medium">

@@ -36,23 +36,23 @@ const AccordionItem = ({ header, ...rest }) => (
   <Item
     {...rest}
     header={({ state: { isEnter } }) => (
-      <>
+      <div className="flex w-full justify-between flex-row-reverse">
         <p>{header}</p>
         <img
-          className={`ml-auto transition-transform duration-200 ease-out w-4 ${
+          className={`transition-transform duration-200 ease-out w-4 ${
             isEnter && "rotate-45"
           }`}
           src="/icons/plus.svg"
           alt="Chevron"
         />
-      </>
+      </div>
     )}
     className="border-b-[#EAEAEA] border-b-[1px] gap-4"
     buttonProps={{
       className: ({ isEnter }) => `flex w-full p-4 text-left`,
     }}
     contentProps={{
-      className: "transition-height duration-200 ease-out text-secondary",
+      className: "transition-height duration-200 ease-out text-secondary text-right",
     }}
     panelProps={{ className: "p-4" }}
   />
