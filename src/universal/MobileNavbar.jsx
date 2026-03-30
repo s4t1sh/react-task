@@ -24,7 +24,7 @@ const MobileNavbar = () => {
   const [sideNav, setSideNav] = useState(false);
 
   return (
-    <nav className="lg:hidden sticky top-0 bg-white z-60">
+    <nav className="lg:hidden sticky top-0 bg-white z-60 border-b-[1px] border-[#EAEAEA]">
       <div className="flex justify-between items-center py-4 px-2">
         <div className="flex items-center gap-10">
           <button
